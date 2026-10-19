@@ -1,0 +1,1046 @@
+<!DOCTYPE HTML>
+<!--
+    Dimension by HTML5 UP (Modified to Start-Up - Dark Purple Theme with Dynamic Colors)
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <title>Start-Up - Samsung Technology of the Future</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        
+        <!-- Modern Font Import (Agregadas Orbitron y Montserrat para más opciones) -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+        
+        <style>
+            /* ==========================================
+               🎨 CONFIGURACIÓN GLOBAL DE TÍTULOS
+               Cambia estos valores para modificar TODOS los títulos a la vez
+               ========================================== */
+            :root {
+                --titulo-fuente: 'Poppins', sans-serif;       /* Fuente de los títulos. Prueba: 'Orbitron', 'Montserrat', 'Arial' */
+                --titulo-color: #e6d5ff;                      /* Color base de los títulos. Prueba: #ffffff, #00d4ff, #ff4757 */
+                --titulo-color-hover: #d896ff;                /* Color de los títulos al pasar el mouse (hover) */
+            }
+
+            /* Aplicar la fuente y color a TODOS los títulos por defecto */
+            h1, h2, h3, h4, h5, h6 {
+                font-family: var(--titulo-fuente);
+                color: var(--titulo-color);
+            }
+
+            /* ========== DARK PURPLE THEME WITH DYNAMIC COLOR CHANGES ========== */
+            body {
+                background-color: #1a0a2e;
+                font-family: 'Poppins', sans-serif; /* Fuente general del texto (cuerpo) */
+            }
+
+            /* Dynamic Color Animation Keyframes */
+            @keyframes gradientShift {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+
+            @keyframes textGlow {
+                0% { color: var(--titulo-color); text-shadow: 0 0 10px rgba(177, 74, 237, 0.5); }
+                50% { color: var(--titulo-color-hover); text-shadow: 0 0 25px rgba(216, 150, 255, 0.9); }
+                100% { color: var(--titulo-color); text-shadow: 0 0 10px rgba(177, 74, 237, 0.5); }
+            }
+
+            @keyframes borderGlow {
+                0% { border-color: #b14aed; box-shadow: 0 0 10px rgba(177, 74, 237, 0.3); }
+                50% { border-color: #d896ff; box-shadow: 0 0 20px rgba(216, 150, 255, 0.6); }
+                100% { border-color: #b14aed; box-shadow: 0 0 10px rgba(177, 74, 237, 0.3); }
+            }
+
+            /* Header */
+            #header {
+                background: linear-gradient(135deg, rgba(45, 27, 78, 0.95) 0%, rgba(26, 10, 46, 0.95) 100%);
+            }
+
+            #header .logo {
+                background-color: #4a1d7a;
+                border: 2px solid #b14aed;
+                animation: borderGlow 4s infinite ease-in-out;
+            }
+
+            #header .logo .icon {
+                color: var(--titulo-color);
+            }
+
+            #header .content .inner {
+                border-color: #b14aed;
+            }
+
+            #header .content .inner h1 {
+                color: var(--titulo-color);
+                animation: textGlow 3s infinite ease-in-out;
+            }
+
+            #header .content .inner p {
+                color: #b8a0d6;
+            }
+
+            #header .content .inner p a {
+                color: var(--titulo-color-hover);
+            }
+
+            /* Logo con imagen */
+            #header .logo img {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 3px solid #b14aed;
+                box-shadow: 0 0 20px rgba(177, 74, 237, 0.6);
+            }
+
+            /* Navegación */
+            #header nav ul li a {
+                color: #d4b8ff;
+                border-color: #4a1d7a;
+                background-color: rgba(74, 29, 122, 0.3);
+                transition: all 0.3s ease;
+            }
+
+            #header nav ul li a:hover {
+                background: linear-gradient(90deg, #6b2fa0, #b14aed, #6b2fa0);
+                background-size: 200% auto;
+                animation: gradientShift 2s linear infinite;
+                color: #ffffff;
+                border-color: var(--titulo-color-hover);
+                box-shadow: 0 0 15px rgba(177, 74, 237, 0.7);
+            }
+
+            /* Main / Artículos */
+            #main {
+                background-color: rgba(26, 10, 46, 0.98);
+            }
+
+            #main article {
+                background-color: rgba(45, 27, 78, 0.95);
+                border: 1px solid #b14aed;
+                transition: border-color 0.5s ease;
+            }
+
+            #main article:hover {
+                border-color: var(--titulo-color-hover);
+            }
+
+            #main article h2.major {
+                color: var(--titulo-color);
+                border-bottom-color: #b14aed;
+            }
+
+            #main article h2.major:after {
+                background: linear-gradient(90deg, #b14aed, #d896ff, #b14aed);
+                background-size: 200% auto;
+                animation: gradientShift 3s linear infinite;
+            }
+
+            #main article h3,
+            #main article h4 {
+                color: var(--titulo-color);
+            }
+
+            #main article p {
+                color: #b8a0d6;
+            }
+
+            #main article a {
+                color: #b14aed;
+                transition: color 0.3s ease;
+            }
+
+            #main article a:hover {
+                color: var(--titulo-color-hover);
+            }
+
+            /* Imágenes principales */
+            #main article .image.main img {
+                border: 2px solid #4a1d7a;
+                transition: border-color 0.5s ease;
+            }
+
+            #main article .image.main img:hover {
+                border-color: var(--titulo-color-hover);
+            }
+
+            /* ============ GALERÍAS DE PRODUCTOS CON PRECIOS ============ */
+            .product-gallery {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 20px;
+                margin: 25px 0;
+            }
+
+            .product-card {
+                background: linear-gradient(145deg, rgba(74, 29, 122, 0.4) 0%, rgba(45, 27, 78, 0.6) 100%);
+                background-size: 200% 200%;
+                border: 1px solid #4a1d7a;
+                border-radius: 12px;
+                overflow: hidden;
+                transition: all 0.4s ease;
+                position: relative;
+                animation: gradientShift 6s ease infinite;
+            }
+
+            .product-card:hover {
+                transform: translateY(-5px);
+                border-color: var(--titulo-color-hover);
+                box-shadow: 0 10px 30px rgba(177, 74, 237, 0.6);
+            }
+
+            .product-card .card-image {
+                position: relative;
+                overflow: hidden;
+            }
+
+            .product-card img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                transition: transform 0.4s ease;
+            }
+
+            .product-card:hover img {
+                transform: scale(1.08);
+            }
+
+            .product-card .badge {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background: linear-gradient(135deg, #b14aed 0%, #6b2fa0 100%);
+                background-size: 200% auto;
+                color: white;
+                padding: 5px 12px;
+                border-radius: 15px;
+                font-size: 0.75em;
+                font-weight: bold;
+                z-index: 2;
+                animation: gradientShift 3s linear infinite;
+            }
+
+            .product-card .badge.new {
+                background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+                background-size: 200% auto;
+                animation: gradientShift 3s linear infinite;
+            }
+
+            .product-card .badge.sale {
+                background: linear-gradient(135deg, #ff4757 0%, #c92a2a 100%);
+                background-size: 200% auto;
+                animation: gradientShift 3s linear infinite;
+            }
+
+            .product-card .card-content {
+                padding: 15px;
+            }
+
+            .product-card .card-title {
+                color: var(--titulo-color);
+                font-family: var(--titulo-fuente);
+                font-size: 1.1em;
+                font-weight: bold;
+                margin: 0 0 8px 0;
+                transition: color 0.3s ease;
+            }
+
+            .product-card:hover .card-title {
+                color: var(--titulo-color-hover);
+            }
+
+            .product-card .card-description {
+                color: #b8a0d6;
+                font-size: 0.9em;
+                line-height: 1.5;
+                margin: 0 0 15px 0;
+            }
+
+            .product-card .card-specs {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 5px;
+                margin-bottom: 12px;
+            }
+
+            .product-card .spec-tag {
+                background-color: rgba(177, 74, 237, 0.2);
+                color: var(--titulo-color-hover);
+                padding: 3px 8px;
+                border-radius: 10px;
+                font-size: 0.75em;
+                transition: all 0.3s ease;
+            }
+
+            .product-card:hover .spec-tag {
+                background-color: rgba(177, 74, 237, 0.4);
+                color: #ffffff;
+            }
+
+            .product-card .card-price {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-top: 12px;
+                border-top: 1px solid #4a1d7a;
+            }
+
+            .product-card .price-current {
+                color: var(--titulo-color);
+                font-size: 1.3em;
+                font-weight: bold;
+                text-shadow: 0 0 10px rgba(177, 74, 237, 0.5);
+            }
+
+            .product-card .price-old {
+                color: #8b6db3;
+                text-decoration: line-through;
+                font-size: 0.8em;
+                margin-right: 8px;
+                display: block;
+            }
+
+            .product-card .price-group {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .product-card .card-btn {
+                background-color: #6b2fa0;
+                color: white;
+                padding: 6px 12px;
+                border-radius: 6px;
+                font-size: 0.85em;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                border: 1px solid #b14aed;
+            }
+
+            .product-card .card-btn:hover {
+                background: linear-gradient(90deg, #b14aed, #d896ff);
+                color: white;
+                box-shadow: 0 0 15px rgba(177, 74, 237, 0.8);
+                border-color: transparent;
+            }
+
+            /* Precios principales */
+            .price-tag {
+                display: inline-block;
+                background: linear-gradient(135deg, #6b2fa0 0%, #b14aed 100%);
+                background-size: 200% auto;
+                color: #ffffff;
+                padding: 10px 20px;
+                border-radius: 25px;
+                font-size: 1.3em;
+                font-weight: bold;
+                margin: 15px 0;
+                box-shadow: 0 4px 15px rgba(177, 74, 237, 0.4);
+                animation: gradientShift 4s ease infinite;
+            }
+
+            .price-old {
+                text-decoration: line-through;
+                color: #8b6db3;
+                font-size: 0.9em;
+                margin-right: 10px;
+            }
+
+            /* Formularios */
+            #main article form .field input[type="text"],
+            #main article form .field input[type="email"],
+            #main article form .field select,
+            #main article form .field textarea {
+                background-color: rgba(26, 10, 46, 0.8);
+                border-color: #4a1d7a;
+                color: var(--titulo-color);
+                font-family: 'Poppins', sans-serif;
+                transition: all 0.3s ease;
+            }
+
+            #main article form .field input[type="text"]:focus,
+            #main article form .field input[type="email"]:focus,
+            #main article form .field select:focus,
+            #main article form .field textarea:focus {
+                border-color: var(--titulo-color-hover);
+                box-shadow: 0 0 15px rgba(216, 150, 255, 0.5);
+                color: #ffffff;
+            }
+
+            #main article form .field label {
+                color: #d4b8ff;
+            }
+
+            /* Botones */
+            #main article .actions input[type="submit"],
+            #main article .actions input[type="reset"],
+            #main article .button {
+                background-color: #4a1d7a;
+                color: var(--titulo-color);
+                border: 1px solid #b14aed;
+                font-family: 'Poppins', sans-serif;
+                transition: all 0.3s ease;
+            }
+
+            #main article .actions input[type="submit"]:hover,
+            #main article .actions input[type="reset"]:hover,
+            #main article .button:hover {
+                background: linear-gradient(90deg, #6b2fa0, #b14aed, #6b2fa0);
+                background-size: 200% auto;
+                animation: gradientShift 2s linear infinite;
+                color: #ffffff;
+                box-shadow: 0 0 20px rgba(177, 74, 237, 0.7);
+                border-color: var(--titulo-color-hover);
+            }
+
+            #main article .button.primary {
+                background-color: #6b2fa0;
+            }
+
+            #main article .button.primary:hover {
+                background: linear-gradient(90deg, #b14aed, #d896ff);
+                color: #ffffff;
+            }
+
+            /* Iconos sociales */
+            #main article .icons li a {
+                color: #b14aed;
+                border-color: #4a1d7a;
+                transition: all 0.3s ease;
+            }
+
+            #main article .icons li a:hover {
+                color: #ffffff;
+                background-color: #b14aed;
+                border-color: var(--titulo-color-hover);
+                box-shadow: 0 0 15px rgba(177, 74, 237, 0.6);
+            }
+
+            /* Sección de características IA */
+            .ai-features {
+                background-color: rgba(74, 29, 122, 0.2);
+                border-left: 4px solid #b14aed;
+                padding: 15px;
+                margin: 20px 0;
+                border-radius: 5px;
+                transition: border-color 0.5s ease;
+            }
+
+            .ai-features:hover {
+                border-left-color: var(--titulo-color-hover);
+            }
+
+            .ai-features h4 {
+                color: var(--titulo-color-hover);
+                margin-top: 0;
+            }
+
+            /* Listas */
+            #main article ul li,
+            #main article ol li {
+                color: #b8a0d6;
+            }
+
+            #main article blockquote {
+                border-left-color: #b14aed;
+                color: #d4b8ff;
+            }
+
+            /* Footer */
+            #footer {
+                background-color: #0f051a;
+            }
+
+            #footer .copyright {
+                color: #8b6db3;
+            }
+
+            #footer .copyright a {
+                color: #b14aed;
+                transition: color 0.3s ease;
+            }
+
+            #footer .copyright a:hover {
+                color: var(--titulo-color-hover);
+            }
+
+            /* Fondo */
+            #bg {
+                background: linear-gradient(135deg, #1a0a2e 0%, #2d1b4e 50%, #1a0a2e 100%);
+                background-size: 200% 200%;
+                animation: gradientShift 10s ease infinite;
+            }
+
+            #bg:before {
+                background: radial-gradient(circle at 20% 50%, rgba(177, 74, 237, 0.15) 0%, transparent 50%),
+                            radial-gradient(circle at 80% 80%, rgba(107, 47, 160, 0.15) 0%, transparent 50%),
+                            radial-gradient(circle at 40% 20%, rgba(216, 150, 255, 0.1) 0%, transparent 50%);
+            }
+
+            /* Scrollbar personalizada */
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+            ::-webkit-scrollbar-track {
+                background: #1a0a2e;
+            }
+            ::-webkit-scrollbar-thumb {
+                background: linear-gradient(180deg, #4a1d7a, #b14aed);
+                border-radius: 5px;
+            }
+            ::-webkit-scrollbar-thumb:hover {
+                background: linear-gradient(180deg, #6b2fa0, #d896ff);
+            }
+        </style>
+    </head>
+    <body class="is-preload">
+
+        <!-- Wrapper -->
+            <div id="wrapper">
+
+                <!-- Header -->
+                    <header id="header">
+                        <div class="logo">
+                            <img src="Logo.png" alt="Start-Up Logo">
+                        </div>
+                        <div class="content">
+                            <div class="inner">
+                                <h1>Start-Up</h1>
+                                <p>Next-generation Samsung technology: smart smartphones, AI refrigerators, and high-definition camera glasses.<br />
+                                Discover the future of technology today.</p>
+                            </div>
+                        </div>
+                        <nav>
+                            <ul>
+                                <li><a href="#smartphones">Smartphones</a></li>
+                                <li><a href="#refrigeradores">AI Refrigerators</a></li>
+                                <li><a href="#lentes">Camera Glasses</a></li>
+                                <li><a href="#contacto">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </header>
+
+                <!-- Main -->
+                    <div id="main">
+
+                        <!-- Samsung Smartphones -->
+                            <article id="smartphones">
+                                <h2 class="major">Samsung Smartphones</h2>
+                                <span class="image main"><img src="Samsung S25 ultra.jpg" alt="Samsung Galaxy S26 Ultra" /></span>
+                                
+                                <p>The Samsung Galaxy S26 smartphones represent the latest in mobile innovation. Equipped with Snapdragon 8 Elite processors optimized with AI, revolutionary 200MP cameras with enhanced optical zoom, Dynamic AMOLED 2X displays with adaptive 1-120Hz refresh rate, and integrated Galaxy AI for limitless productivity.</p>
+                                
+                                <h3>🎯 Latest Smartphone Catalog with Prices:</h3>
+                                
+                                <div class="product-gallery">
+                                    <!-- Product 1: Galaxy S26 Ultra -->
+                                    <div class="product-card">
+                                        <div class="card-image">
+                                            <span class="badge new">NEW 2026</span>
+                                            <img src="Samsung S25 ultra.jpg" alt="Galaxy S26 Ultra" />
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="card-title">Galaxy S26 Ultra</h4>
+                                            <p class="card-description">Samsung's most advanced smartphone. 200MP AI camera, S Pen Pro included, aerospace titanium frame, and 5500mAh battery.</p>
+                                            <div class="card-specs">
+                                                <span class="spec-tag">512GB</span>
+                                                <span class="spec-tag">16GB RAM</span>
+                                                <span class="spec-tag">5G+</span>
+                                                <span class="spec-tag">Snapdragon 8 Elite</span>
+                                            </div>
+                                            <div class="card-price">
+                                                <div class="price-group">
+                                                    <span class="price-old">L. 39,520</span>
+                                                    <span class="price-current">L. 34,580</span>
+                                                </div>
+                                                <a href="#contacto" class="card-btn">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Product 2: Galaxy S26+ -->
+                                    <div class="product-card">
+                                        <div class="card-image">
+                                            <span class="badge new">NEW 2026</span>
+                                            <img src="sansumg s26 plus.jpg" alt="Galaxy S26+" />
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="card-title">Galaxy S26 Plus</h4>
+                                            <p class="card-description">6.7" QHD+ display with 5000mAh battery and 65W ultra-fast charging. Perfect for gaming and multimedia.</p>
+                                            <div class="card-specs">
+                                                <span class="spec-tag">256GB</span>
+                                                <span class="spec-tag">12GB RAM</span>
+                                                <span class="spec-tag">5G+</span>
+                                                <span class="spec-tag">IP68</span>
+                                            </div>
+                                            <div class="card-price">
+                                                <div class="price-group">
+                                                    <span class="price-old">L. 29,640</span>
+                                                    <span class="price-current">L. 27,170</span>
+                                                </div>
+                                                <a href="#contacto" class="card-btn">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Product 3: Galaxy S26 -->
+                                    <div class="product-card">
+                                        <div class="card-image">
+                                            <span class="badge sale">-15%</span>
+                                            <img src="sansumg 26.avif" alt="Galaxy S26" />
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="card-title">Galaxy S26</h4>
+                                            <p class="card-description">Compact and powerful. Premium 6.2" design with all Galaxy AI features and a professional 50MP camera.</p>
+                                            <div class="card-specs">
+                                                <span class="spec-tag">256GB</span>
+                                                <span class="spec-tag">12GB RAM</span>
+                                                <span class="spec-tag">5G</span>
+                                                <span class="spec-tag">IP68</span>
+                                            </div>
+                                            <div class="card-price">
+                                                <div class="price-group">
+                                                    <span class="price-old">L. 24,700</span>
+                                                    <span class="price-current">L. 19,760</span>
+                                                </div>
+                                                <a href="#contacto" class="card-btn">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Product 4: Galaxy Z Fold 7 -->
+                                    <div class="product-card">
+                                        <div class="card-image">
+                                            <span class="badge new">FOLDABLE 2026</span>
+                                            <img src="samsung galaxy fold7.jpg" alt="Galaxy Z Fold 7" />
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="card-title">Galaxy Z Fold 7</h4>
+                                            <p class="card-description">The ultimate foldable. 7.9" inner display with no visible crease, advanced multitasking, and full S Pen Fold Edition compatibility.</p>
+                                            <div class="card-specs">
+                                                <span class="spec-tag">1TB</span>
+                                                <span class="spec-tag">16GB RAM</span>
+                                                <span class="spec-tag">Foldable</span>
+                                                <span class="spec-tag">S Pen</span>
+                                            </div>
+                                            <div class="card-price">
+                                                <div class="price-group">
+                                                    <span class="price-old">L. 54,340</span>
+                                                    <span class="price-current">L. 49,400</span>
+                                                </div>
+                                                <a href="#contacto" class="card-btn">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Product 5: Galaxy Z Flip 7 -->
+                                    <div class="product-card">
+                                        <div class="card-image">
+                                            <span class="badge new">COMPACT</span>
+                                            <img src="galaxy Z flip 7.webp" alt="Galaxy Z Flip 7" />
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="card-title">Galaxy Z Flip 7</h4>
+                                            <p class="card-description">The most elegant foldable smartphone. 3.9" FlexWindow outer display and dual 50MP camera. Ultra-slim 6.9mm design.</p>
+                                            <div class="card-specs">
+                                                <span class="spec-tag">256GB</span>
+                                                <span class="spec-tag">8GB RAM</span>
+                                                <span class="spec-tag">FlexWindow</span>
+                                                <span class="spec-tag">IP48</span>
+                                            </div>
+                                            <div class="card-price">
+                                                <div class="price-group">
+                                                    <span class="price-old">L. 29,640</span>
+                                                    <span class="price-current">L. 24,700</span>
+                                                </div>
+                                                <a href="#contacto" class="card-btn">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <ul class="actions">
+                                    <li><a href="#contacto" class="button primary">View All Models</a></li>
+                                    <li><a href="#" class="button">Compare Specifications</a></li>
+                                </ul>
+                            </article>
+
+                        <!-- AI Smart Refrigerators -->
+                            <article id="refrigeradores">
+                                <h2 class="major">AI Refrigerators</h2>
+                                <span class="image main"><img src="OIP.webp" alt="Samsung Family Hub AI" /></span>
+                                
+                                <p>Samsung Family Hub refrigerators with Artificial Intelligence completely transform your kitchen. Equipped with the AI Vision Inside™ processor that automatically recognizes over 300 types of food.</p>
+                                
+                                <div class="ai-features">
+                                    <h4>🤖 Integrated Artificial Intelligence:</h4>
+                                    <ul>
+                                        <li><strong>AI Food Recognition:</strong> Automatically recognizes fruits, vegetables, meats, and more.</li>
+                                        <li><strong>Smart Recipe Suggestions:</strong> Suggests recipes based on your available ingredients.</li>
+                                        <li><strong>Expiration Alerts:</strong> Alerts you before food expires.</li>
+                                        <li><strong>Energy Optimization:</strong> Adjusts energy consumption based on your habits.</li>
+                                    </ul>
+                                </div>
+                                
+                                <h3>🎯 Refrigerator Catalog with Prices:</h3>
+                                
+                                <div class="product-gallery">
+                                    <!-- Product 1: Family Hub French Door -->
+                                    <div class="product-card">
+                                        <div class="card-image">
+                                            <span class="badge new">PREMIUM</span>
+                                            <img src="OIP (1).webp" alt="Family Hub French Door" />
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="card-title">Family Hub French Door</h4>
+                                            <p class="card-description">French doors with a 21.5" touchscreen. 28 cubic feet capacity with advanced AI.</p>
+                                            <div class="card-specs">
+                                                <span class="spec-tag">28 cu ft</span>
+                                                <span class="spec-tag">AI Vision</span>
+                                                <span class="spec-tag">21.5" Screen</span>
+                                                <span class="spec-tag">InstaView</span>
+                                            </div>
+                                            <div class="card-price">
+                                                <div class="price-group">
+                                                    <span class="price-old">L. 86,425</span>
+                                                    <span class="price-current">L. 74,075</span>
+                                                </div>
+                                                <a href="#contacto" class="card-btn">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Product 2: Bespoke 4-Door Flex -->
+                                    <div class="product-card">
+                                        <div class="card-image">
+                                            <span class="badge">CUSTOM</span>
+                                            <img src="OIP (2).webp" alt="Bespoke 4-Door Flex" />
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="card-title">Bespoke 4-Door Flex</h4>
+                                            <p class="card-description">Customizable design with 4 doors and interchangeable panels. Convert freezer to refrigerator.</p>
+                                            <div class="card-specs">
+                                                <span class="spec-tag">32 cu ft</span>
+                                                <span class="spec-tag">Flex Zone</span>
+                                                <span class="spec-tag">AI Energy</span>
+                                                <span class="spec-tag">Modular</span>
+                                            </div>
+                                            <div class="card-price">
+                                                <div class="price-group">
+                                                    <span class="price-old">L. 96,305</span>
+                                                    <span class="price-current">L. 81,485</span>
+                                                </div>
+                                                <a href="#contacto" class="card-btn">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Product 3: Side-by-Side AI -->
+                                    <div class="product-card">
+                                        <div class="card-image">
+                                            <span class="badge sale">-15%</span>
+                                            <img src="OIP (3).webp" alt="Side-by-Side AI" />
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="card-title">Side-by-Side AI</h4>
+                                            <p class="card-description">Side-by-side design with water and ice dispenser. AI automatically optimizes temperature.</p>
+                                            <div class="card-specs">
+                                                <span class="spec-tag">26 cu ft</span>
+                                                <span class="spec-tag">Dispenser</span>
+                                                <span class="spec-tag">Smart WiFi</span>
+                                                <span class="spec-tag">Inverter</span>
+                                            </div>
+                                            <div class="card-price">
+                                                <div class="price-group">
+                                                    <span class="price-old">L. 61,725</span>
+                                                    <span class="price-current">L. 51,845</span>
+                                                </div>
+                                                <a href="#contacto" class="card-btn">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Product 4: Bespoke Mini AI -->
+                                    <div class="product-card">
+                                        <div class="card-image">
+                                            <span class="badge new">COMPACT</span>
+                                            <img src="OIP (4).webp" alt="Bespoke Mini AI" />
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="card-title">Bespoke Mini AI</h4>
+                                            <p class="card-description">Compact refrigerator ideal for offices or bedrooms. Customizable design with integrated AI.</p>
+                                            <div class="card-specs">
+                                                <span class="spec-tag">11 cu ft</span>
+                                                <span class="spec-tag">Compact</span>
+                                                <span class="spec-tag">AI Lite</span>
+                                                <span class="spec-tag">Silent</span>
+                                            </div>
+                                            <div class="card-price">
+                                                <div class="price-group">
+                                                    <span class="price-old">L. 24,675</span>
+                                                    <span class="price-current">L. 20,970</span>
+                                                </div>
+                                                <a href="#contacto" class="card-btn">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Product 5: Wine Cooler AI -->
+                                    <div class="product-card">
+                                        <div class="card-image">
+                                            <span class="badge">PREMIUM</span>
+                                            <img src="OPI4.webp" alt="Wine Cooler AI" />
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="card-title">Wine Cooler AI</h4>
+                                            <p class="card-description">Smart wine cooler with independent temperature zones. Recognizes grape varieties.</p>
+                                            <div class="card-specs">
+                                                <span class="spec-tag">98 bottles</span>
+                                                <span class="spec-tag">2 Zones</span>
+                                                <span class="spec-tag">AI Sommelier</span>
+                                                <span class="spec-tag">UV Protect</span>
+                                            </div>
+                                            <div class="card-price">
+                                                <div class="price-group">
+                                                    <span class="price-old">L. 46,905</span>
+                                                    <span class="price-current">L. 39,495</span>
+                                                </div>
+                                                <a href="#contacto" class="card-btn">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Product 6: Freezer Chest AI -->
+                                    <div class="product-card">
+                                        <div class="card-image">
+                                            <span class="badge sale">-25%</span>
+                                            <img src="OIP (6).webp" alt="Freezer Chest AI" />
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="card-title">Freezer Chest AI</h4>
+                                            <p class="card-description">High-capacity chest freezer with AI to optimize energy. Ideal for large families.</p>
+                                            <div class="card-specs">
+                                                <span class="spec-tag">25 cu ft</span>
+                                                <span class="spec-tag">-30°C</span>
+                                                <span class="spec-tag">AI Energy</span>
+                                                <span class="spec-tag">Convertible</span>
+                                            </div>
+                                            <div class="card-price">
+                                                <div class="price-group">
+                                                    <span class="price-old">L. 32,085</span>
+                                                    <span class="price-current">L. 24,180</span>
+                                                </div>
+                                                <a href="#contacto" class="card-btn">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <ul class="actions">
+                                    <li><a href="#contacto" class="button primary">Request Installation Quote</a></li>
+                                    <li><a href="#" class="button">Download PDF Catalog</a></li>
+                                </ul>
+                            </article>
+
+                        <!-- Camera Glasses -->
+                            <article id="lentes">
+                                <h2 class="major">Camera Glasses</h2>
+                                <span class="image main"><img src="gafa.webp" alt="Samsung AR Glasses" /></span>
+                                
+                                <p>Samsung smart glasses with integrated cameras revolutionize the way you capture moments. With dual 12MP cameras with optical stabilization, 4K video recording, and live streaming directly to your social media.</p>
+                                
+                                <h3>🎯 Camera Glasses Catalog with Prices:</h3>
+                                
+                                <div class="product-gallery">
+                                    <!-- Product 1: AR Vision Pro -->
+                                    <div class="product-card">
+                                        <div class="card-image">
+                                            <span class="badge new">PREMIUM</span>
+                                            <img src="gafapro.jpg" alt="AR Vision Pro" />
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="card-title">AR Vision Pro</h4>
+                                            <p class="card-description">Flagship model with full augmented reality. HUD display, dual 12MP cameras, and 3D spatial audio.</p>
+                                            <div class="card-specs">
+                                                <span class="spec-tag">4K 60fps</span>
+                                                <span class="spec-tag">AR HUD</span>
+                                                <span class="spec-tag">8hr battery</span>
+                                                <span class="spec-tag">IPX5</span>
+                                            </div>
+                                            <div class="card-price">
+                                                <div class="price-group">
+                                                    <span class="price-old">L. 22,205</span>
+                                                    <span class="price-current">L. 17,265</span>
+                                                </div>
+                                                <a href="#contacto" class="card-btn">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Product 2: Capture Lite -->
+                                    <div class="product-card">
+                                        <div class="card-image">
+                                            <span class="badge">LITE</span>
+                                            <img src="OIP.jpg" alt="Capture Lite" />
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="card-title">Capture Lite</h4>
+                                            <p class="card-description">Lightweight version ideal for daily use. 8MP camera, ultra-light 35g design, and automatic synchronization.</p>
+                                            <div class="card-specs">
+                                                <span class="spec-tag">1080p</span>
+                                                <span class="spec-tag">35 grams</span>
+                                                <span class="spec-tag">5hr battery</span>
+                                                <span class="spec-tag">Bluetooth 5.3</span>
+                                            </div>
+                                            <div class="card-price">
+                                                <div class="price-group">
+                                                    <span class="price-old">L. 12,325</span>
+                                                    <span class="price-current">L. 9,855</span>
+                                                </div>
+                                                <a href="#contacto" class="card-btn">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Product 3: Sport Cam Glasses -->
+                                    <div class="product-card">
+                                        <div class="card-image">
+                                            <span class="badge">SPORT</span>
+                                            <img src="gafas.avif" alt="Sport Cam Glasses" />
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="card-title">Sport Cam Glasses</h4>
+                                            <p class="card-description">Designed for athletes. Advanced stabilization, impact-resistant, and integrated GPS.</p>
+                                            <div class="card-specs">
+                                                <span class="spec-tag">4K 120fps</span>
+                                                <span class="spec-tag">GPS</span>
+                                                <span class="spec-tag">IPX7</span>
+                                                <span class="spec-tag">Stabilizer</span>
+                                            </div>
+                                            <div class="card-price">
+                                                <div class="price-group">
+                                                    <span class="price-old">L. 16,030</span>
+                                                    <span class="price-current">L. 13,560</span>
+                                                </div>
+                                                <a href="#contacto" class="card-btn">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Product 4: Creator Edition -->
+                                    <div class="product-card">
+                                        <div class="card-image">
+                                            <span class="badge new">CREATOR</span>
+                                            <img src="OIP (5).webp" alt="Creator Edition" />
+                                        </div>
+                                        <div class="card-content">
+                                            <h4 class="card-title">Creator Edition</h4>
+                                            <p class="card-description">Special edition for content creators. Live streaming, AR filters, and automatic AI editing.</p>
+                                            <div class="card-specs">
+                                                <span class="spec-tag">Live Stream</span>
+                                                <span class="spec-tag">AR Filters</span>
+                                                <span class="spec-tag">AI Edit</span>
+                                                <span class="spec-tag">128GB</span>
+                                            </div>
+                                            <div class="card-price">
+                                                <div class="price-group">
+                                                    <span class="price-old">L. 19,735</span>
+                                                    <span class="price-current">L. 16,030</span>
+                                                </div>
+                                                <a href="#contacto" class="card-btn">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <ul class="actions">
+                                    <li><a href="#contacto" class="button primary">Book a Demo</a></li>
+                                    <li><a href="#" class="button">View Accessories</a></li>
+                                </ul>
+                            </article>
+
+                        <!-- Contact -->
+                            <article id="contacto">
+                                <h2 class="major">Contact</h2>
+                                <p>Interested in our products? Contact us for more information, special prices, or to place your order. Our team of experts will help you choose the perfect technology for your needs.</p>
+                                
+                                <form method="post" action="#">
+                                    <div class="fields">
+                                        <div class="field half">
+                                            <label for="name">Name</label>
+                                            <input type="text" name="name" id="name" />
+                                        </div>
+                                        <div class="field half">
+                                            <label for="email">Email</label>
+                                            <input type="email" name="email" id="email" />
+                                        </div>
+                                        <div class="field">
+                                            <label for="phone">Phone</label>
+                                            <input type="text" name="phone" id="phone" placeholder="+504" />
+                                        </div>
+                                        <div class="field">
+                                            <label for="product">Product of Interest</label>
+                                            <select name="product" id="product">
+                                                <option value="">Select...</option>
+                                                <option value="smartphone">Samsung Galaxy S26 Smartphone - from L. 19,760</option>
+                                                <option value="fridge">Family Hub AI Refrigerator - from L. 20,970</option>
+                                                <option value="glasses">AR Camera Glasses - from L. 9,855</option>
+                                                <option value="other">Other / General Inquiry</option>
+                                            </select>
+                                        </div>
+                                        <div class="field">
+                                            <label for="message">Message</label>
+                                            <textarea name="message" id="message" rows="4"></textarea>
+                                        </div>
+                                    </div>
+                                    <ul class="actions">
+                                        <li><input type="submit" value="Send Message" class="primary" /></li>
+                                        <li><input type="reset" value="Clear" /></li>
+                                    </ul>
+                                </form>
+                                
+                                <h3>Contact Information:</h3>
+                                <ul>
+                                    <li>📧 Email: sales@startup.hn</li>
+                                    <li>📱 Phone: +504 2555-1234</li>
+                                    <li> WhatsApp: +504 9999-8888</li>
+                                    <li>📍 Address: Blvd. Morazán, Torre Centro, Tegucigalpa, Honduras</li>
+                                    <li>🕐 Hours: Monday to Friday 9:00 AM - 6:00 PM</li>
+                                </ul>
+                                
+                                <ul class="icons">
+                                    <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                                    <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                                    <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                    <li><a href="#" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+                                    <li><a href="#" class="icon brands fa-whatsapp"><span class="label">WhatsApp</span></a></li>
+                                </ul>
+                            </article>
+
+                    </div>
+
+                <!-- Footer -->
+                    <footer id="footer">
+                        <p class="copyright">&copy; Start-Up 2026 - Tegucigalpa, Honduras. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+                    </footer>
+
+            </div>
+
+        <!-- BG -->
+            <div id="bg"></div>
+
+        <!-- Scripts -->
+            <script src="assets/js/jquery.min.js"></script>
+            <script src="assets/js/browser.min.js"></script>
+            <script src="assets/js/breakpoints.min.js"></script>
+            <script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+
+    </body>
+</html>
